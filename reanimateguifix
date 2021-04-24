@@ -1,0 +1,200 @@
+game.StarterGui:SetCore("SendNotification", {
+Title = "sus";
+Text = "sus";
+Duration = 5;
+})
+
+-- ui lib
+local Flux = loadstring(game:HttpGet"https://raw.githubusercontent.com/dawid-scripts/UI-Libs/main/fluxlib.txt")()
+local win = Flux:Window("Alsoo3", "Reanimate GUI", Color3.fromRGB(255,0,0), Enum.KeyCode.LeftControl)
+
+-- Scripts
+local tab = win:Tab("Scripts", "http://www.roblox.com/asset/?id=0")
+tab:Label("Scripts")
+
+tab:Line()
+
+tab:Button("Krystal Dance", "epic dance moves", function()
+loadstring(game:HttpGet('https://pastebin.com/raw/FV3HLmTH'))()
+end)
+
+tab:Button("Chill", "very chill", function()
+loadstring(game:HttpGetAsync("https://pastebin.com/raw/XmHFdTij"))()
+end)
+
+tab:Button("VR", "fake VR script without a VR headset", function()
+loadstring(game:HttpGetAsync("https://pastebin.com/raw/7vu46PFU"))()
+end)
+
+tab:Button("Car", "vroom", function()
+loadstring(game:HttpGetAsync("https://pastebin.com/raw/e0H1h4j2"))()
+end)
+
+tab:Button("Pyramid", "triangle", function()
+loadstring(game:HttpGetAsync("https://pastebin.com/raw/47FxhPef"))()
+end)
+
+tab:Button("Table", "you're a table", function()
+loadstring(game:HttpGetAsync("https://pastebin.com/raw/9kDrHnUd"))()
+end)
+
+tab:Button("Caducus", "scary", function()
+loadstring(game:HttpGetAsync("https://pastebin.com/raw/EBZJSfw0"))()
+end)
+
+tab:Button("Sonic", "gotta go fast", function()
+loadstring(game:HttpGetAsync("https://pastebin.com/raw/SyF5t70A"))()
+end)
+
+tab:Button("Gun", "invisible gun :)", function()
+loadstring(game:HttpGetAsync("https://pastebin.com/raw/u4Nm3Wfa"))()
+end)
+
+tab:Button("Wall Walk", "gravity go brrrrr", function()
+loadstring(game:HttpGetAsync("https://pastebin.com/raw/1jh2FCAx"))()
+end)
+
+tab:Button("Dog", "woof", function()
+loadstring(game:HttpGetAsync("https://pastebin.com/raw/H0fCpUYQ"))()
+end)
+
+tab:Button("Joy", "idfk", function()
+loadstring(game:HttpGetAsync("https://pastebin.com/raw/zsTgRNnT"))()
+end)
+
+tab:Button("Gale Fighter", "lol", function()
+loadstring(game:HttpGetAsync("https://pastebin.com/raw/f05jEiEC"))()
+end)
+
+tab:Button("Amogus", "when the imposter is sus!", function()
+loadstring(game:HttpGetAsync("https://pastebin.com/raw/nYqgReC3"))()
+end)
+
+tab:Button("Head Resize", "big head (you must be r15 and you need to wear any rthro package)", function()
+loadstring(game:HttpGetAsync('https://raw.githubusercontent.com/ProjectBoring/Head-Resize-v1/main/Head%20Size%20Obfuscated.lua'))()
+end)
+
+tab:Line()
+
+-- hat scripts
+tab2 = win:Tab("Hat Scripts", "http://www.roblox.com/asset/?id=0")
+tab2:Label("Hat Scripts")
+
+tab2:Line()
+
+tab2:Button("Sniper", "u shoot ppl with it lol", function()
+loadstring(game:HttpGetAsync("https://pastebin.com/raw/fyij5FSZ"))()
+end)
+
+tab2:Button("John Doe", "ahhhhhhhh scary hacker run!", function()
+loadstring(game:HttpGetAsync("https://pastebin.com/raw/DwhVGxTs"))()
+end)
+
+tab2:Button("NepV bat lol", "skidded xd", function()
+loadstring(game:HttpGetAsync("https://pastebin.com/raw/Xjd3HaGH"))()
+end)
+
+tab2:Button("Hat Universe", "the power of the international fedoras", function()
+loadstring(game:HttpGetAsync("https://pastebin.com/raw/x23Udfmz"))()
+end)
+
+tab2:Button("VR w/deadly weapons", "vr with a gun and a sword", function()
+loadstring(game:HttpGetAsync("https://pastebin.com/raw/3UyVkraS"))()
+end)
+
+tab2:Button("Hot Script very sus +18", "don't even execute this", function()
+loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/seth98128/scripts/main/no"))()
+end)
+
+tab2:Button("Trix's Archomatic Edit", "yes", function()
+loadstring(game:HttpGetAsync("https://pastebin.com/raw/EDbf0kD0"))()
+end)
+
+tab2:Button("Archomatic Edit no mesh", "removes mesh from the hat", function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/seth98128/scripts/main/achromaticnomesh"))()
+end)
+
+tab2:Button("Hat Resize GUI", "makes your hat bigger", function()
+loadstring(game:HttpGet("https://pastebin.com/raw/sm1W569x"))()
+end)
+
+tab2:Line()
+
+-- Utility and stuff
+tab3 = win:Tab("Misc", "http://www.roblox.com/asset/?id=0")
+
+tab3:Label("LocalPlayer")
+tab3:Line()
+
+tab3:Slider("Walkspeed", "Makes you faster.", 0, 200,16,function(t)
+game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = (t)
+end)
+
+tab3:Slider("JumpPower", "Makes you jump higher", 0, 200,50,function(t)
+game.Players.LocalPlayer.Character.Humanoid.JumpPower = (t)
+end)
+
+tab3:Slider("Gravity", "Changes Your gravity", 0, 500,196,function(t)
+game.Workspace.Gravity = (t)
+end)
+
+tab3:Button("GodMode", "Anyone cant kill you (BUT DON'T PRESS R)",  function()
+loadstring(game:HttpGet('https://pastebin.com/raw/7i7CsTPe'))()
+end)
+
+tab3:Line()
+
+tab3:Button("Rejoin", "rejoin game", function()
+local ts = game:GetService("TeleportService")
+local p = game:GetService("Players").LocalPlayer
+ts:Teleport(game.PlaceId, p)
+end)
+
+tab3:Button("ServerHop", "serverhops to another server", function()
+local HttpService, TPService = game:GetService("HttpService"), game:GetService("TeleportService")
+local ServersToTP = HttpService:JSONDecode(game:HttpGet("https://games.roblox.com/v1/games/"..game.PlaceId.."/servers/Public?sortOrder=Asc&limit=100"))
+for _, s in pairs(ServersToTP.data) do
+   if s.playing ~= s.maxPlayers then
+       TPService:TeleportToPlaceInstance(game.PlaceId, s.id)
+   end
+end
+end)
+
+tab3:Line()
+
+tab3:Label("Script Hub")
+tab3:Line()
+
+tab3:Button("Infinite Yield FE", "Loads infinite yield admin FE", function()
+loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
+end)
+
+tab3:Button("Ragdoll GUI", "Loads tsuniox's ragdoll engine gui", function()
+loadstring(game:HttpGet('https://gitlab.com/Tsuniox/lua-stuff/-/raw/master/RagdollEngineGUI.lua'))()
+end)
+
+tab3:Button("Another Ragdoll GUI", "Loads vynixyu's ragdoll gui thing", function()
+loadstring(game:HttpGet('https://raw.githubusercontent.com/RegularVynixu/Scripts/master/Vynixius%20Ragdoll%20Engine'))()
+end)
+
+tab3:Button("Auratus X", "Loads Auratus X", function()
+loadstring(game:HttpGet('https://pastebin.com/raw/1J8jdMBk'))()
+end)
+
+tab3:Button("CMD-X", "Loads cmd-x fe admin", function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/CMD-X/CMD-X/master/Source", true))()
+end)
+
+tab3:Button("Ez Hub", "Loads Ez Hub", function()
+loadstring(game:HttpGet('https://raw.githubusercontent.com/debug420/Ez-Industries-Launcher-Data/master/Launcher.lua',true))()
+end)
+tab3:Line()
+
+-- credits
+tab4 = win:Tab("Credits", "http://www.roblox.com/asset/?id=0")
+tab4:Label("Credits:")
+tab4:Line()
+tab4:Label("alsoo3#8722- Creator")
+tab4:Label("credits to all for the scripts")
+tab4:Label("disc: aJb4k3rKVu")
+tab4:Line()
