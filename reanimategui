@@ -1,5 +1,5 @@
 game.StarterGui:SetCore("SendNotification", {
-Title = "NsusI";
+Title = "sus";
 Text = "sus";
 Duration = 5;
 })
@@ -194,7 +194,7 @@ tab3:Line()
 tab4 = win:Tab("Credits", "http://www.roblox.com/asset/?id=0")
 tab4:Label("Credits:")
 tab4:Line()
-tab4:Label("sethplayslol#3832 - Creator")
+tab4:Label("alsoo3#8722- Creator")
 tab4:Label("credits to all for the scripts")
 tab4:Label("disc: aJb4k3rKVu")
 tab4:Line()
