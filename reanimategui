@@ -6,7 +6,7 @@ Duration = 5;
 
 -- ui lib
 local Flux = loadstring(game:HttpGet"https://raw.githubusercontent.com/dawid-scripts/UI-Libs/main/fluxlib.txt")()
-local win = Flux:Window("Alsoo3", "Reanimate GUI", Color3.fromRGB(0,0,0), Enum.KeyCode.LeftControl)
+local win = Flux:Window("Alsoo3", "Reanimate GUI", Color3.fromRGB(255,0,0), Enum.KeyCode.LeftControl)
 
 -- Scripts
 local tab = win:Tab("Scripts", "http://www.roblox.com/asset/?id=0")
