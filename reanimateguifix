@@ -1,4 +1,4 @@
-game.StarterGui:SetCore("SendNotification", {
+game.StarterGui:SetCore("SendNotification")
 Title = "sus";
 Text = "sus";
 Duration = 5;
