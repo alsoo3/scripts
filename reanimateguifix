@@ -10,7 +10,7 @@ local win = Flux:Window("Alsoo3", "Reanimate GUI", Color3.fromRGB(255,0,0), Enum
 
 -- Scripts
 local tab = win:Tab("Scripts", "http://www.roblox.com/asset/?id=0")
-tab:Label("Scripts")
+tab:Label("Scripts (uses reanimate)")
 
 tab:Line()
 
@@ -90,8 +90,8 @@ tab2:Button("John Doe", "ahhhhhhhh scary hacker run!", function()
 loadstring(game:HttpGetAsync("https://pastebin.com/raw/DwhVGxTs"))()
 end)
 
-tab2:Button("NepV bat lol", "skidded xd", function()
-loadstring(game:HttpGetAsync("https://pastebin.com/raw/Xjd3HaGH"))()
+tab2:Button("Netless nameless r6", "you already know what it is", function()
+loadstring(game:HttpGetAsync("https://https://raw.githubusercontent.com/alsoo3/scripts/main/fat"),true))()
 end)
 
 tab2:Button("Hat Universe", "the power of the international fedoras", function()
@@ -120,75 +120,717 @@ end)
 
 tab2:Line()
 
--- Utility and stuff
-tab3 = win:Tab("Misc", "http://www.roblox.com/asset/?id=0")
+local tab3 = win:Tab("Non reanimateScripts", "http://www.roblox.com/asset/?id=0")
+tab:Label("Scripts (doesnt use reanimate)")
 
-tab3:Label("LocalPlayer")
+tab3:Button("shit dancer", "cbt" function()
+
+						local plr= game.Players.LocalPlayer
+
+														local chr= game.Players.LocalPlayer.Character
+														local asin = math.asin
+														local atan2 = math.atan2
+														local rad = math.rad
+														local sin = math.sin
+														local abs = math.abs
+														local ceil = math.ceil
+ 
+														local function getAngles(cf)
+															local sx,sy,sz,m00,m01,m02,m10,m11,m12,m20,m21,m22 = cf:components()
+															return atan2(-m12,m22),asin(m02),atan2(-m01,m00)
+														end
+														Lerp = {
+															Number = function(C1,C2,inc)
+																return C1 + (C2 - C1) * inc
+															end;
+															CFrame = function(a,b,m)
+																local c,d={a:components()},{b:components()}
+																table.foreach(c,function(a,b)c[a]=c[a]+(d[a]-c[a])*m end)
+																return CFrame.new(unpack(c))
+															end;
+														}
+														local function genWeld(a,b)
+															local w = Instance.new("Weld",a)
+															w.Part0 = a
+															w.Part1 = b
+															return w
+														end
+														local Song = function(id,pitch)
+															for i,v in pairs(chr:GetChildren()) do
+																if v:IsA("Sound") then
+																	v:Destroy()
+																end
+														end
+															if id ~='252166378' then
+															sound = Instance.new("Sound",chr)
+															sound.Volume = math.huge
+															sound.Looped = true
+															sound.SoundId="rbxassetid://"..id
+															if pitch~=nil then
+																sound.Pitch=pitch
+															end
+															sound:Play()
+														elseif id == '252166378' then
+															for i = 1,100 do
+																	sound = Instance.new("Sound",chr)
+															sound.Volume = math.huge
+															sound.Looped = true
+															sound.SoundId="rbxassetid://"..id
+															if pitch~=nil then
+																sound.Pitch=pitch
+															end
+															sound:Play()
+														end
+														end
+														end
+														Part = function(x,y,z,color,tr,cc,an,parent)
+															local p = Instance.new('Part',parent or Weapon)
+															p.formFactor = 'Custom'
+															p.Size = Vector3.new(x,y,z)
+															p.BrickColor = BrickColor.new(color)
+															p.CanCollide = cc
+															p.Transparency = tr
+															p.Anchored = an
+															p.TopSurface,p.BottomSurface = 0,0
+															p:BreakJoints()
+															return p
+														end
+														Weld = function(p0,p1,x,y,z,rx,ry,rz,par)
+															local w = Instance.new('Motor',par or p0)
+															w.Part0 = p0
+															w.Part1 = p1
+															w.C1 = CFrame.new(x,y,z)*CFrame.Angles(rx,ry,rz)
+															return w
+														end
+														Mesh = function(par,num,x,y,z)
+															local msh = nil
+															if num == 1 then
+																msh = Instance.new("CylinderMesh",par)
+															elseif num == 2 then
+																msh = Instance.new("SpecialMesh",par)
+																msh.MeshType = 'Wedge'
+															elseif num == 3 then
+																msh = Instance.new("BlockMesh",par)
+															elseif type(num) == 'string' then
+																msh = Instance.new("SpecialMesh",par)
+																msh.MeshId = num
+															end
+															msh.Scale = Vector3.new(x,y,z)
+															return msh
+														end
+														anglespeed = 1
+														yeet = 0
+														count = 0
+														angle = 0
+														local dance = 0
+														speed = 1
+														local plr= game.Players.LocalPlayer
+														local chr=plr.Character
+														local torso=chr.Torso
+														local mouse=plr:GetMouse()
+														local Neck = genWeld(chr.Torso,chr.Head)
+														Neck.C0 = CFrame.new(0,1,0)
+														Neck.C1 = CFrame.new(0,-0.5,0)
+														local LeftShoulder = genWeld(chr.Torso,chr['Left Arm'])
+														LeftShoulder.C0 = CFrame.new(-1,0.5,0)
+														LeftShoulder.C1 = CFrame.new(0.5,0.5,0)
+														RightShoulder = genWeld(chr.Torso,chr['Right Arm'])
+														RightShoulder.C0 = CFrame.new(1,0.5,0)
+														RightShoulder.C1 = CFrame.new(-0.5,0.5,0)
+														local LeftHip = genWeld(chr.Torso,chr['Left Leg'])
+														LeftHip.C0 = CFrame.new(-1,-1,0)
+														LeftHip.C1 = CFrame.new(-0.5,1,0)
+														local RightHip = genWeld(chr.Torso,chr['Right Leg'])
+														RightHip.C0 = CFrame.new(1,-1,0)
+														RightHip.C1 = CFrame.new(0.5,1,0)
+														local RootJoint = genWeld(chr.HumanoidRootPart,chr.Torso)
+														RootJoint.C0 = CFrame.new(0,0,0) * CFrame.Angles(-math.pi/2,0,math.pi)
+														RootJoint.C1 = CFrame.new(0,0,0) * CFrame.Angles(-math.pi/2,0,math.pi)
+														local function newLerpTo(weld)
+																return {
+																		Weld = weld; -- The weld that will lerp
+																		To = weld.C0; -- Where it will lerp to; a CFrame
+																		Cache = weld.C0; -- Cache of original position; it helps when making anim keyframes
+																		Speed = 0.1; -- Speed of lerp. 0.1 or 0.2 is best
+																}
+														end
+ 
+														LerpTo = {
+																Neck = newLerpTo(Neck);
+																LeftArm = newLerpTo(LeftShoulder);
+																RightArm = newLerpTo(RightShoulder);
+																LeftLeg = newLerpTo(LeftHip);
+																RightLeg = newLerpTo(RightHip);
+																RootJoint = newLerpTo(RootJoint);
+														}
+														local anim = true
+														local function updateanims()
+															if anim==true then
+																if Vector3.new(torso.Velocity.x, 0, torso.Velocity.z).magnitude < 2 and dance == 0 then
+																	anglespeed = 1/3
+																	LerpTo.Neck.To = LerpTo.Neck.Cache * CFrame.Angles(sin(angle)*0.05,0,0)
+																	LerpTo.RightArm.To = LerpTo.RightArm.Cache * CFrame.Angles(abs(sin(angle))*.2,rad(0),rad(0))
+																	LerpTo.LeftArm.To = LerpTo.LeftArm.Cache * CFrame.Angles(-abs(sin(angle))*.2,0,0)
+																	LerpTo.RightLeg.To = LerpTo.RightLeg.Cache * CFrame.Angles(0,0,abs(sin(angle))*0.2)
+																	LerpTo.LeftLeg.To = LerpTo.LeftLeg.Cache * CFrame.Angles(0,0,-abs(sin(angle))*0.2) 
+																	LerpTo.RootJoint.To=LerpTo.RootJoint.Cache * CFrame.new(0,0,0)*CFrame.Angles(0,0,0)
+																end
+																if Vector3.new(torso.Velocity.x, 0, torso.Velocity.z).magnitude > 2 and dance == 0 then
+																	anglespeed = 1.5
+																	LerpTo.Neck.To = LerpTo.Neck.Cache * CFrame.Angles(0,0,math.sin(angle)*0.05)
+																	LerpTo.RightArm.To = LerpTo.RightArm.Cache * CFrame.Angles(sin(angle)*.8,0,0)
+																	LerpTo.LeftArm.To = LerpTo.LeftArm.Cache * CFrame.Angles(-sin(angle)*.8,0,0)
+																	LerpTo.RightLeg.To = LerpTo.RightLeg.Cache * CFrame.Angles(-sin(angle)*.8,0,0)
+																	LerpTo.LeftLeg.To = LerpTo.LeftLeg.Cache * CFrame.Angles(sin(angle)*.8,0,0) 
+																	LerpTo.RootJoint.To=LerpTo.RootJoint.Cache * CFrame.new(0,0,0)*CFrame.Angles(0,0,0)
+																end
+															end
+															if anim == false then
+																if dance == 1 then
+																	anglespeed = 3
+																	LerpTo.Neck.To = LerpTo.Neck.Cache * CFrame.Angles(rad(10),0,sin(yeet)*0.1)
+																	LerpTo.RootJoint.To = LerpTo.RootJoint.Cache * CFrame.Angles(rad(20),sin(angle)*0.2,sin(angle)*0.5) * CFrame.new(0,-abs(sin(angle))*0.5,0)
+																	LerpTo.RightArm.To = LerpTo.RightArm.Cache * CFrame.Angles(rad(90)-sin(angle)*1,0,-rad(10))
+																	LerpTo.LeftArm.To = LerpTo.LeftArm.Cache * CFrame.Angles(rad(90)-sin(angle)*1,0,rad(10))
+																	LerpTo.RightLeg.To = LerpTo.RightLeg.Cache * CFrame.Angles(rad(20),0,abs(sin(yeet))*0.1)
+																	LerpTo.LeftLeg.To = LerpTo.LeftLeg.Cache * CFrame.Angles(rad(20),0,-abs(sin(yeet))*0.1) 
+																end
+																if dance == 2 then
+																	anglespeed = 3
+																	LerpTo.Neck.To = LerpTo.Neck.Cache*CFrame.Angles(0,0,sin(angle)*.1)
+																	LerpTo.RootJoint.To = LerpTo.RootJoint.Cache * CFrame.new(0,0,2+sin(angle)*.25)
+																	LerpTo.RightArm.To = LerpTo.RightArm.Cache * CFrame.Angles(rad(90)+sin(angle)*1,0,rad(5)+sin(angle)*-.5)
+																	LerpTo.LeftArm.To = LerpTo.LeftArm.Cache * CFrame.Angles(rad(90)+sin(angle)*1,0,rad(5)-sin(angle)*-.5)
+																	LerpTo.RightLeg.To = LerpTo.RightLeg.Cache * CFrame.Angles(rad(0),rad(0),sin(angle)*.25)
+																	LerpTo.LeftLeg.To = LerpTo.LeftLeg.Cache * CFrame.Angles(rad(0),rad(0),sin(angle)*-.25)
+																end
+																if dance == 3 then
+																	anglespeed = 1.5
+																	LerpTo.Neck.To = LerpTo.Neck.Cache*CFrame.Angles(0,0,0)
+																	LerpTo.RootJoint.To = LerpTo.RootJoint.Cache * CFrame.Angles(0,0,0)*CFrame.new(sin(angle)*5,0,0)
+																	LerpTo.RightArm.To=LerpTo.RightArm.Cache*CFrame.Angles(rad(90)-sin(angle)*1,0,rad(0)-sin(angle)*.25)
+																	LerpTo.LeftArm.To = LerpTo.LeftArm.Cache*CFrame.Angles(rad(0),rad(0),sin(angle)*.25)
+																	LerpTo.RightLeg.To = LerpTo.RightLeg.Cache*CFrame.Angles(0,0,sin(angle)*.1)
+																	LerpTo.LeftLeg.To = LerpTo.LeftLeg.Cache*CFrame.Angles(0,0,-sin(angle)*.1)
+																end
+																if dance == 4 then
+																	anglespeed = 1.5
+																	LerpTo.Neck.To = LerpTo.Neck.Cache * CFrame.Angles(0,0,0)
+																	LerpTo.RootJoint.To = LerpTo.RootJoint.Cache * CFrame.new(0,sin(angle)*5,0)
+																	LerpTo.RightArm.To = LerpTo.RightArm.Cache * CFrame.Angles(rad(0),rad(0),sin(angle)*.25)
+																	LerpTo.LeftArm.To = LerpTo.LeftArm.Cache * CFrame.Angles(rad(0),rad(0),sin(angle)*.25)
+																	LerpTo.RightLeg.To = LerpTo.RightLeg.Cache * CFrame.Angles(sin(angle)*.25,0,0)
+																	LerpTo.LeftLeg.To = LerpTo.LeftLeg.Cache * CFrame.Angles(sin(angle)*-.25,0,0)
+																end
+																if dance == 5 then
+																	anglespeed = 3
+																LerpTo.Neck.To=LerpTo.Neck.Cache*CFrame.Angles(-rad(25),0,0)
+																	LerpTo.RootJoint.To = LerpTo.RootJoint.Cache * CFrame.new(0,0,0) * CFrame.Angles(-rad(25)+sin(angle)*.1,0,0)
+																	LerpTo.RightArm.To = LerpTo.RightArm.Cache * CFrame.Angles(rad(90),0,-rad(55))
+																	LerpTo.LeftArm.To = LerpTo.LeftArm.Cache * CFrame.Angles(rad(90),0,rad(55))
+																	LerpTo.RightLeg.To = LerpTo.RightLeg.Cache * CFrame.Angles(-rad(25)+sin(angle)*.1,0,0)
+																	LerpTo.LeftLeg.To = LerpTo.LeftLeg.Cache * CFrame.Angles(-rad(25)+sin(angle)*.1,0,0)
+																end
+																if dance == 6 then
+																	anglespeed = 2
+																	LerpTo.Neck.To = LerpTo.Neck.Cache * CFrame.Angles(math.pi/10-math.abs(math.sin(angle))*0.3,0, 0)
+																	LerpTo.RootJoint.To = LerpTo.RootJoint.Cache * CFrame.new(0, 0, 0) * CFrame.Angles(0, 0,math.sin(angle)*.2)
+																	LerpTo.RightArm.To = LerpTo.RightArm.Cache * CFrame.Angles(math.pi/3+math.abs(math.sin(angle)*1), 0,  math.sin(angle*1)*.5)
+																	LerpTo.LeftArm.To = LerpTo.LeftArm.Cache * CFrame.Angles(math.pi/3+math.abs(math.sin(angle)*1), 0,  math.sin(angle*1)*.5)
+																	LerpTo.RightLeg.To = LerpTo.RightLeg.Cache * CFrame.Angles(0, math.sin(angle)*.2, math.rad(2.5))
+																	LerpTo.LeftLeg.To = LerpTo.LeftLeg.Cache * CFrame.Angles(0, -math.sin(angle)*.2, -math.rad(2.5))
+																end
+																if dance == 7 then -- insane spaz out l0l
+																	anglespeed = 1
+																	LerpTo.Neck.To = LerpTo.Neck.Cache * CFrame.new(math.random(-5,5),math.random(-5,5),math.random(-5,5))*CFrame.Angles(math.random(-5,5),math.random(-5,5),math.random(-5,5))
+																	LerpTo.RootJoint.To = LerpTo.RootJoint.Cache * CFrame.new(math.random(-5,5),math.random(-5,5),0)*CFrame.Angles(math.random(-5,5),math.random(-5,5),math.random(-5,5))
+																	LerpTo.RightArm.To = LerpTo.RightArm.Cache * CFrame.new(math.random(-5,5),math.random(-5,5),math.random(-5,5))*CFrame.Angles(math.random(-5,5),math.random(-5,5),math.random(-5,5))
+																	LerpTo.LeftArm.To = LerpTo.LeftArm.Cache * CFrame.new(math.random(-5,5),math.random(-5,5),math.random(-5,5))*CFrame.Angles(math.random(-5,5),math.random(-5,5),math.random(-5,5))
+																	LerpTo.RightLeg.To = LerpTo.RightLeg.Cache * CFrame.new(math.random(-5,5),math.random(-5,5),math.random(-5,5))*CFrame.Angles(math.random(-5,5),math.random(-5,5),math.random(-5,5))
+																	LerpTo.LeftLeg.To = LerpTo.LeftLeg.Cache * CFrame.new(math.random(-5,5),math.random(-5,5),math.random(-5,5))*CFrame.Angles(math.random(-5,5),math.random(-5,5),math.random(-5,5))
+																end
+																if dance == 8 then -- roleo dance :D
+																	anglespeed = 4
+																	LerpTo.RightArm.To = LerpTo.RightArm.Cache*CFrame.Angles(rad(180),0,sin(angle)*.3)
+																	LerpTo.LeftArm.To = LerpTo.LeftArm.Cache*CFrame.Angles(rad(180),0,sin(angle)*.3)
+																end
+																if dance == 9 then -- XD lol mast3r ba!t!ng dance :)
+																	anglespeed = 6
+																	LerpTo.RightArm.To = LerpTo.RightArm.Cache*CFrame.Angles(rad(90)+sin(angle)*1,0,rad(-45))
+																	LerpTo.LeftArm.To = LerpTo.LeftArm.Cache*CFrame.Angles(rad(90)+sin(angle)*1,0,rad(45))
+																end
+																if dance == 10 then --but scratch :D
+																	anglespeed = 5
+																	LerpTo.RightArm.To = LerpTo.RightArm.Cache*CFrame.Angles(rad(-25),0,rad(-25))*CFrame.new(0,sin(angle)*.5,0)
+																	LerpTo.LeftArm.To = LerpTo.LeftArm.Cache*CFrame.Angles(rad(-25),0,rad(25))*CFrame.new(0,sin(angle)*.5,0)
+																end
+																if dance == 11 then -- CARTWHEELS LOLW0T!?
+																	anglespeed = 2
+																	LerpTo.RootJoint.To=LerpTo.RootJoint.Cache*CFrame.Angles(sin(angle)*2,0,0)*CFrame.new(0,sin(angle)*2,0)
+																end
+																if dance == 12 then -- EPICO :)
+																  anglespeed = 5
+																  LerpTo.Neck.To=LerpTo.Neck.Cache*CFrame.Angles(0,0,sin(angle)*2)
+																  LerpTo.RootJoint.To=LerpTo.RootJoint.Cache*CFrame.Angles(0,0,sin(angle)*2)
+																  LerpTo.RightArm.To=LerpTo.RightArm.Cache*CFrame.Angles(rad(90),rad(0),sin(angle)*2)
+																  LerpTo.LeftArm.To=LerpTo.LeftArm.Cache*CFrame.Angles(rad(90),rad(0),sin(angle)*2)
+																end
+																if dance == 13 then -- EPICO2 :)
+																  anglespeed = 5
+																  LerpTo.Neck.To=LerpTo.Neck.Cache*CFrame.Angles(rad(-25)+sin(angle)*.5,0,0)
+																  LerpTo.RightArm.To=LerpTo.RightArm.Cache*CFrame.Angles(rad(90)+sin(angle)*.2,rad(0),rad(-15))
+																  LerpTo.LeftArm.To=LerpTo.LeftArm.Cache*CFrame.Angles(rad(90)+sin(angle)*.2,rad(0),rad(15))
+																elseif dance == 14 then -- FLIPS :)
+															  anglespeed = 6
+															  LerpTo.RootJoint.To=LerpTo.RootJoint.Cache*CFrame.Angles(math.cos(0,360)*angle,0,0)
+																  LerpTo.RightArm.To=LerpTo.RightArm.Cache*CFrame.Angles(rad(45),rad(0),rad(0))
+																  LerpTo.LeftArm.To=LerpTo.LeftArm.Cache*CFrame.Angles(rad(45),rad(0),rad(0))
+																  LerpTo.RightLeg.To=LerpTo.RightLeg.Cache*CFrame.new(0,1,-.75)
+																  LerpTo.LeftLeg.To=LerpTo.LeftLeg.Cache*CFrame.new(0,1,-.75)
+																end
+																if dance == 15 then
+																	anglespeed = 3
+																	LerpTo.Neck.To = LerpTo.Neck.Cache * CFrame.Angles(rad(10),0,sin(yeet)*0.1)
+																	LerpTo.RootJoint.To = LerpTo.RootJoint.Cache * CFrame.Angles(rad(20),sin(angle)*0.2,sin(angle)*0.5) * CFrame.new(0,-abs(sin(angle))*2,0)
+																	LerpTo.RightArm.To = LerpTo.RightArm.Cache * CFrame.Angles(rad(90)-sin(angle)*1,0,-rad(10))
+																	LerpTo.LeftArm.To = LerpTo.LeftArm.Cache * CFrame.Angles(rad(90)-sin(angle)*1,0,rad(10))
+																	LerpTo.RightLeg.To = LerpTo.RightLeg.Cache * CFrame.Angles(rad(20),0,abs(sin(yeet))*0.1)
+																	LerpTo.LeftLeg.To = LerpTo.LeftLeg.Cache * CFrame.Angles(rad(20),0,-abs(sin(yeet))*0.1) 
+																end
+																if dance == 16 then
+																	anglespeed = 3
+																LerpTo.Neck.To=LerpTo.Neck.Cache*CFrame.Angles(rad(0),rad(90),rad(0))
+																LerpTo.RootJoint.To=LerpTo.RootJoint.Cache*CFrame.Angles(rad(90),rad(0),rad(0))*CFrame.new(0,-2.5,0)
+																LerpTo.RightArm.To=LerpTo.RightArm.Cache*CFrame.Angles(rad(170),rad(0),rad(15))
+																LerpTo.LeftArm.To=LerpTo.LeftArm.Cache*CFrame.Angles(rad(0),rad(0),rad(-75))
+																LerpTo.RightLeg.To=LerpTo.RightLeg.Cache*CFrame.Angles(rad(0),rad(0),rad(0))
+																LerpTo.LeftLeg.To=LerpTo.LeftLeg.Cache*CFrame.Angles(rad(0),rad(0),rad(0))
+																end
+																if dance == 17 then
+														anglespeed = 2
+																	LerpTo.Neck.To = LerpTo.Neck.Cache * CFrame.Angles(math.pi/10-math.abs(math.sin(angle))*0.3,0, 0)
+																	LerpTo.RootJoint.To = LerpTo.RootJoint.Cache*CFrame.new(math.sin(angle)*2,0,0) * CFrame.Angles(math.pi/20,0,-math.sin(angle)*.5)
+																	LerpTo.RightArm.To = LerpTo.RightArm.Cache * CFrame.Angles(math.pi/3+math.abs(math.sin(angle)*.5), math.pi/20,  -math.pi/20)
+																	LerpTo.LeftArm.To = LerpTo.LeftArm.Cache * CFrame.Angles(math.pi/3+math.abs(math.sin(angle)*.5), -math.pi/20,  math.pi/20)
+																	LerpTo.RightLeg.To = LerpTo.RightLeg.Cache * CFrame.Angles(math.pi/20+math.sin(angle)*0.2, math.sin(angle)*0.08, math.rad(2.5))
+																	LerpTo.LeftLeg.To = LerpTo.LeftLeg.Cache * CFrame.Angles(math.pi/20-math.sin(angle)*0.2, -math.sin(angle)*0.08, -math.rad(2.5))
+																end
+																if dance == 18 then
+														anglespeed = 4
+																	LerpTo.Neck.To = LerpTo.Neck.Cache * CFrame.Angles(0,sin(angle)*2,0) 
+																LerpTo.RightArm.To = LerpTo.RightArm.Cache * CFrame.Angles(0, 0,  math.rad(90)-sin(angle)*1)
+																	LerpTo.LeftArm.To = LerpTo.LeftArm.Cache * CFrame.Angles(0,0,  math.rad(-90)+sin(angle)*1)
+																	LerpTo.RightLeg.To = LerpTo.RightLeg.Cache * CFrame.Angles(rad(0),rad(0),rad(0))
+																	LerpTo.LeftLeg.To = LerpTo.LeftLeg.Cache * CFrame.Angles(rad(0),rad(0),rad(0))
+																end
+																if dance == 19 then
+														anglespeed = 4
+																	LerpTo.Neck.To = LerpTo.Neck.Cache * CFrame.Angles(rad(30),0,0)  
+																LerpTo.RootJoint.To=LerpTo.RootJoint.Cache*CFrame.Angles(math.pi/5,0,0)     
+																LerpTo.RightArm.To = LerpTo.RightArm.Cache * CFrame.Angles(math.rad(180)-sin(angle)*1,0,0)
+																	LerpTo.LeftArm.To = LerpTo.LeftArm.Cache * CFrame.Angles(math.rad(180)-sin(angle)*1,0,0)
+																	LerpTo.RightLeg.To = LerpTo.RightLeg.Cache * CFrame.Angles(rad(30),rad(0),rad(0))
+																	LerpTo.LeftLeg.To = LerpTo.LeftLeg.Cache * CFrame.Angles(rad(30),rad(0),rad(0))
+																end
+															if dance == 20 then
+																anglespeed = 5
+																LerpTo.RootJoint.To=LerpTo.RootJoint.Cache*CFrame.Angles(math.cos(0,360)*angle,0,0)
+																	LerpTo.RightArm.To = LerpTo.RightArm.Cache * CFrame.Angles(math.rad(180),0,0)
+																		LerpTo.LeftArm.To = LerpTo.LeftArm.Cache * CFrame.Angles(math.rad(180),0,0)
+															end
+															if dance == 21 then
+																anglespeed = 5
+																LerpTo.RootJoint.To=LerpTo.RootJoint.Cache*CFrame.Angles(0,0,sin(angle)*1)
+																LerpTo.RightArm.To=LerpTo.RightArm.Cache*CFrame.Angles(-sin(angle)*1,0,0)
+																LerpTo.LeftArm.To=LerpTo.LeftArm.Cache*CFrame.Angles(sin(angle)*1,0,0)
+																LerpTo.RightLeg.To=LerpTo.RightLeg.Cache*CFrame.Angles(sin(angle)*1,0,0)
+																LerpTo.LeftLeg.To=LerpTo.LeftLeg.Cache*CFrame.Angles(-sin(angle)*1,0,0)
+															end
+															if dance == 22 then
+																anglespeed = 5
+																LerpTo.RootJoint.To=LerpTo.RootJoint.Cache*CFrame.Angles(0,math.cos(0,360)*angle,0)
+																	LerpTo.RightArm.To = LerpTo.RightArm.Cache * CFrame.Angles(math.rad(180),0,0)
+																		LerpTo.LeftArm.To = LerpTo.LeftArm.Cache * CFrame.Angles(math.rad(180),0,0)
+															end
+															if dance == 23 then
+																anglespeed = 3
+																LerpTo.Neck.To=LerpTo.Neck.Cache*CFrame.Angles(rad(25),0,0)
+																LerpTo.RootJoint.To=LerpTo.RootJoint.Cache*CFrame.Angles(0,0,sin(angle)*1)
+																LerpTo.RightArm.To = LerpTo.RightArm.Cache * CFrame.Angles(0,0,rad(90)+sin(angle)*2)
+																LerpTo.LeftArm.To = LerpTo.LeftArm.Cache * CFrame.Angles(0,0,-rad(90)-sin(angle)*2)
+															end
+															if dance == 24 then
+																anglespeed = 2
+																LerpTo.Neck.To=LerpTo.Neck.Cache*CFrame.Angles(sin(angle)*.75,rad(45),0)
+																LerpTo.RootJoint.To=LerpTo.RootJoint.Cache*CFrame.Angles(0,0,0)
+																LerpTo.RightArm.To=LerpTo.RightArm.Cache*CFrame.Angles(0,0,0)
+																LerpTo.LeftArm.To=LerpTo.LeftArm.Cache*CFrame.Angles(0,0,0)
+																LerpTo.RightLeg.To=LerpTo.RightLeg.Cache*CFrame.Angles(0,0,0)
+																LerpTo.LeftLeg.To=LerpTo.LeftLeg.Cache*CFrame.Angles(0,0,0)
+															end
+																if dance == 25 then
+																	anglespeed = 3
+																	LerpTo.Neck.To=LerpTo.Neck.Cache*CFrame.Angles(rad(25),0,0)
+																	LerpTo.RootJoint.To=LerpTo.RootJoint.Cache*CFrame.Angles(rad(25),0,sin(angle)*.2)
+																	LerpTo.RightArm.To=LerpTo.RightArm.Cache*CFrame.Angles(rad(90)-sin(angle)*.2,rad(0),rad(0))
+																	LerpTo.LeftArm.To=LerpTo.LeftArm.Cache*CFrame.Angles(rad(90)+sin(angle)*.2,rad(0),rad(0))
+																	LerpTo.RightLeg.To=LerpTo.RightLeg.Cache*CFrame.Angles(rad(25),0,0)
+																	LerpTo.LeftLeg.To=LerpTo.LeftLeg.Cache*CFrame.Angles(rad(25),0,0)
+																end
+															if dance == 26 then
+																anglespeed = 5
+																LerpTo.Neck.To=LerpTo.Neck.Cache*CFrame.Angles(-abs(sin(angle))*.5,0,0)
+																LerpTo.RootJoint.To=LerpTo.RootJoint.Cache*CFrame.Angles(0,0,0)*CFrame.new(0,sin(angle)*2,0)
+																	LerpTo.RightArm.To=LerpTo.RightArm.Cache*CFrame.Angles(rad(135)+sin(angle)*.4,0,-rad(15))
+																	LerpTo.LeftArm.To=LerpTo.LeftArm.Cache*CFrame.Angles(rad(135)+sin(angle)*.4,rad(0),rad(15))
+																	LerpTo.RightLeg.To=LerpTo.RightLeg.Cache*CFrame.Angles(sin(angle)*.4,0,0)
+																	LerpTo.LeftLeg.To=LerpTo.LeftLeg.Cache*CFrame.Angles(-sin(angle)*.4,0,0)
+															end
+															if dance == 27 then
+																anglespeed = 2
+																LerpTo.Neck.To=LerpTo.Neck.Cache*CFrame.Angles(0,0,0)
+																LerpTo.RootJoint.To=LerpTo.RootJoint.Cache*CFrame.new(sin(angle)*3,0,0)*CFrame.Angles(rad(90),0,sin(angle)*3)
+																LerpTo.RightArm.To=LerpTo.RightArm.Cache*CFrame.Angles(sin(angle)*1.5,0,0)
+																LerpTo.LeftArm.To=LerpTo.LeftArm.Cache*CFrame.Angles(-sin(angle)*1.5,0,0)
+																LerpTo.RightLeg.To=LerpTo.RightLeg.Cache*CFrame.Angles(-sin(angle)*1.5,0,0)
+																LerpTo.LeftLeg.To=LerpTo.LeftLeg.Cache*CFrame.Angles(sin(angle)*1.5,0,0)
+															end
+															if dance == 28 then
+																anglespeed = 2
+																LerpTo.Neck.To=LerpTo.Neck.Cache*CFrame.Angles(0,0,0)
+																LerpTo.RootJoint.To=LerpTo.RootJoint.Cache*CFrame.new(0,0,abs(sin(angle))*3)
+																LerpTo.RightArm.To=LerpTo.RightArm.Cache*CFrame.Angles(rad(180),0,rad(25))
+																LerpTo.LeftArm.To=LerpTo.LeftArm.Cache*CFrame.Angles(rad(180),0,-rad(25))
+																LerpTo.RightLeg.To=LerpTo.RightLeg.Cache*CFrame.Angles(0,0,0)*CFrame.new(0,abs(sin(angle))*1,0)
+																LerpTo.LeftLeg.To=LerpTo.LeftLeg.Cache*CFrame.Angles(0,0,0)*CFrame.new(0,abs(sin(angle))*1,0)
+																end
+																if dance == 29 then
+																	anglespeed = 5
+																	LerpTo.Neck.To=LerpTo.Neck.Cache*CFrame.Angles(0,0,0)
+																	LerpTo.RootJoint.To=LerpTo.RootJoint.Cache*CFrame.Angles(0,0,0)
+																	LerpTo.RightArm.To=LerpTo.RightArm.Cache*CFrame.Angles(sin(angle)*2,0,0)
+																	LerpTo.LeftArm.To=LerpTo.LeftArm.Cache*CFrame.Angles(-sin(angle)*2,0,0)
+																	LerpTo.RightLeg.To=LerpTo.RightLeg.Cache*CFrame.Angles(0,0,0)
+																	LerpTo.LeftLeg.To=LerpTo.LeftLeg.Cache*CFrame.Angles(0,0,0)
+																end
+																if dance == 30 then
+																	anglespeed = 3
+																	LerpTo.Neck.To=LerpTo.Neck.Cache*CFrame.Angles(0,0,0)
+																	LerpTo.RootJoint.To=LerpTo.RootJoint.Cache*CFrame.Angles(0,0,0)
+																	LerpTo.RightArm.To=LerpTo.RightArm.Cache*CFrame.Angles(sin(angle)*2,0,0)
+																	LerpTo.LeftArm.To=LerpTo.LeftArm.Cache*CFrame.Angles(-sin(angle)*2,0,0)
+																	LerpTo.RightLeg.To=LerpTo.RightLeg.Cache*CFrame.new(0,abs(sin(angle))*1,-abs(sin(angle))*1)*CFrame.Angles(-rad(25),0,0)
+																	LerpTo.LeftLeg.To=LerpTo.LeftLeg.Cache*CFrame.new(0,abs(sin(angle))*1,-abs(sin(angle))*1)*CFrame.Angles(-rad(45),0,0)
+																end
+																if dance == 31 then
+																	anglespeed = 1
+																	LerpTo.Neck.To=LerpTo.Neck.Cache*CFrame.Angles(0,0,0)
+																	LerpTo.RootJoint.To=LerpTo.RootJoint.Cache*CFrame.Angles(0,0,0)
+																	LerpTo.RightArm.To=LerpTo.RightArm.Cache*CFrame.Angles(abs(sin(angle))*2.5,0,-abs(sin(angle))*1)
+																	LerpTo.LeftArm.To=LerpTo.LeftArm.Cache*CFrame.Angles(0,0,0)
+																	LerpTo.RightLeg.To=LerpTo.RightLeg.Cache*CFrame.Angles(0,0,0)
+																	LerpTo.LeftLeg.To=LerpTo.LeftLeg.Cache*CFrame.Angles(0,0,0)
+																end 
+																if dance == 32 then
+																	anglespeed = 4
+																	LerpTo.Neck.To = LerpTo.Neck.Cache * CFrame.Angles(0,-sin(angle)*0.2,0)
+																	LerpTo.RootJoint.To = LerpTo.RootJoint.Cache * CFrame.Angles(0,0,sin(angle)*0.2)
+																	LerpTo.RightArm.To = LerpTo.RightArm.Cache * CFrame.Angles(rad(80)+sin(angle)*0.2,0,-rad(50)) *CFrame.new(0,-.5,0)
+																	LerpTo.LeftArm.To = LerpTo.LeftArm.Cache * CFrame.Angles(rad(90)+sin(angle)*0.2,0,rad(50))*CFrame.new(0,-.5,0)
+																	LerpTo.RightLeg.To = LerpTo.RightLeg.Cache * CFrame.Angles(0,0,rad(20)+sin(angle)*0.5) *CFrame.new(0,abs(sin(angle))*0.3,0)
+																	LerpTo.LeftLeg.To = LerpTo.LeftLeg.Cache * CFrame.Angles(0,0,-rad(20)+sin(angle)*0.5) *CFrame.new(0,abs(sin(angle))*0.3,0)
+																end
+																if dance == 33 then
+																	anglespeed = 4
+																	LerpTo.Neck.To = LerpTo.Neck.Cache * CFrame.Angles(0,-sin(angle)*0.2,0)
+																	LerpTo.RootJoint.To = LerpTo.RootJoint.Cache * CFrame.Angles(0,0,sin(angle)*0.2) * CFrame.new(0,0,-abs(sin(angle))*0.4)
+																	LerpTo.RightArm.To = LerpTo.RightArm.Cache * CFrame.Angles(rad(180)+sin(angle)*1,0,sin(angle)*1)
+																	LerpTo.LeftArm.To = LerpTo.LeftArm.Cache * CFrame.Angles(rad(90)+sin(angle)*0.2,0,rad(50))*CFrame.new(0,-.5,0)
+																	LerpTo.RightLeg.To = LerpTo.RightLeg.Cache * CFrame.Angles(0,0,rad(20)+sin(angle)*0.5) *CFrame.new(0,abs(sin(angle))*0.3,0)
+																	LerpTo.LeftLeg.To = LerpTo.LeftLeg.Cache * CFrame.Angles(0,0,-rad(20)+sin(angle)*0.5) *CFrame.new(0,abs(sin(angle))*0.3,0)
+																end
+																if dance == 34 then
+																	anglespeed = 3
+																	LerpTo.Neck.To=LerpTo.Neck.Cache*CFrame.Angles(rad(25),0,0)
+																	LerpTo.RootJoint.To=LerpTo.RootJoint.Cache*CFrame.Angles(rad(25),0,sin(angle)*.2)
+																	LerpTo.RightArm.To=LerpTo.RightArm.Cache*CFrame.Angles(rad(90)-sin(angle)*.2,rad(0),rad(0))
+																	LerpTo.LeftArm.To=LerpTo.LeftArm.Cache*CFrame.Angles(rad(90)+sin(angle)*.2,rad(0),rad(0))
+																	LerpTo.RightLeg.To=LerpTo.RightLeg.Cache*CFrame.Angles(rad(25),0,0)
+																	LerpTo.LeftLeg.To=LerpTo.LeftLeg.Cache*CFrame.Angles(rad(25),0,0)
+																end
+																if dance == 35 then
+																	anglespeed = 3
+																	LerpTo.Neck.To=LerpTo.Neck.Cache*CFrame.Angles(0,0,0)
+																	LerpTo.RootJoint.To=LerpTo.RootJoint.Cache*CFrame.Angles(0,0,0)
+																	LerpTo.RightArm.To=LerpTo.RightArm.Cache*CFrame.Angles(rad(100),rad(35),rad(75))
+																	LerpTo.LeftArm.To=LerpTo.LeftArm.Cache*CFrame.Angles(rad(75)+sin(angle)*.5,0,rad(75))*CFrame.new(0,-.75+sin(angle)*.2,0)
+																	LerpTo.RightLeg.To=LerpTo.RightLeg.Cache*CFrame.Angles(0,0,0)
+																	LerpTo.LeftLeg.To=LerpTo.LeftLeg.Cache*CFrame.Angles(0,0,0)
+																end
+																if dance == 36 then
+																	anglespeed = 3
+																	LerpTo.Neck.To=LerpTo.Neck.Cache*CFrame.Angles(-rad(25),0,0)
+																	LerpTo.RootJoint.To=LerpTo.RootJoint.Cache*CFrame.Angles(0,0,0)
+																	LerpTo.RightArm.To=LerpTo.RightArm.Cache*CFrame.Angles(rad(90)-abs(sin(angle))*.5,0,sin(angle)*1.75)
+																	LerpTo.LeftArm.To=LerpTo.LeftArm.Cache*CFrame.Angles(rad(90)-abs(sin(angle)) * .25,0,sin(angle)*1.5)
+																	LerpTo.RightLeg.To=LerpTo.RightLeg.Cache*CFrame.Angles(0,0,0)
+																	LerpTo.LeftLeg.To=LerpTo.LeftLeg.Cache*CFrame.Angles(0,0,0)
+																end
+																if dance == 37 then
+																	anglespeed = 2
+																	LerpTo.Neck.To=LerpTo.Neck.Cache*CFrame.Angles(rad(15),sin(angle)*.75,0)
+																	LerpTo.RootJoint.To=LerpTo.RootJoint.Cache*CFrame.Angles(0,0,0)
+																	LerpTo.RightArm.To=LerpTo.RightArm.Cache*CFrame.Angles(rad(90)+abs(sin(angle))*1,rad(15),-rad(15))
+																	LerpTo.LeftArm.To=LerpTo.LeftArm.Cache*CFrame.Angles(rad(90)+abs(sin(angle))*1,-rad(15),rad(15))
+																	LerpTo.RightLeg.To=LerpTo.RightLeg.Cache*CFrame.Angles(0,-abs(sin(angle))*.2,0)
+																	LerpTo.LeftLeg.To=LerpTo.LeftLeg.Cache*CFrame.Angles(0,abs(sin(angle))*.2,0)
+																end
+																if dance == 38 then
+																	anglespeed = 2
+																	LerpTo.Neck.To=LerpTo.Neck.Cache*CFrame.Angles(rad(15),0,0)
+																	LerpTo.RootJoint.To=LerpTo.RootJoint.Cache*CFrame.Angles(0,0,sin(angle)*1)
+																	LerpTo.RightArm.To=LerpTo.RightArm.Cache*CFrame.Angles(0,0,rad(90)+sin(angle)*1)
+																	LerpTo.LeftArm.To=LerpTo.LeftArm.Cache*CFrame.Angles(0,0,-rad(90)-sin(angle)*1)
+																	LerpTo.RightLeg.To=LerpTo.RightLeg.Cache*CFrame.Angles(0,0,0)
+																	LerpTo.LeftLeg.To=LerpTo.LeftLeg.Cache*CFrame.Angles(0,0,0)
+																end
+																if dance == 39 then
+																	anglespeed = 2
+																	LerpTo.Neck.To=LerpTo.Neck.Cache*CFrame.Angles(0,0,0)
+																	LerpTo.RootJoint.To=LerpTo.RootJoint.Cache*CFrame.Angles(0,0,0)
+																	LerpTo.RightArm.To=LerpTo.RightArm.Cache*CFrame.Angles(rad(180),0,sin(angle)*.25)
+																	LerpTo.LeftArm.To=LerpTo.LeftArm.Cache*CFrame.Angles(rad(180),0,sin(angle)*.25)
+																	LerpTo.RightLeg.To=LerpTo.RightLeg.Cache*CFrame.Angles(0,0,0)
+																	LerpTo.LeftLeg.To=LerpTo.LeftLeg.Cache*CFrame.Angles(0,0,0)
+																end
+																if dance == 40 then
+																	anglespeed = 2
+																	LerpTo.Neck.To=LerpTo.Neck.Cache*CFrame.Angles(0,-abs(sin(angle))*.75,0)
+																	LerpTo.RootJoint.To=LerpTo.RootJoint.Cache*CFrame.Angles(0,0,abs(sin(angle))*.75)
+																	LerpTo.RightArm.To=LerpTo.RightArm.Cache*CFrame.Angles(rad(90),0,abs(sin(angle))*.75)
+																	LerpTo.LeftArm.To=LerpTo.LeftArm.Cache*CFrame.Angles(0,0,-abs(sin(angle))*.25)
+																	LerpTo.RightLeg.To=LerpTo.RightLeg.Cache*CFrame.Angles(0,0,0)
+																	LerpTo.LeftLeg.To=LerpTo.LeftLeg.Cache*CFrame.Angles(0,0,0)
+																end
+																if dance == 41 then
+																	anglespeed = 1
+																	LerpTo.Neck.To=LerpTo.Neck.Cache*CFrame.Angles(0,0,0)
+																	LerpTo.RootJoint.To=LerpTo.RootJoint.Cache*CFrame.Angles(0,0,0)
+																	LerpTo.RightArm.To=LerpTo.RightArm.Cache*CFrame.Angles(rad(135)-abs(sin(angle))*2.75,0,rad(25)-abs(sin(angle))*.5)
+																	LerpTo.LeftArm.To=LerpTo.LeftArm.Cache*CFrame.Angles(rad(135)-abs(sin(angle))*2.75,0,-rad(25)+abs(sin(angle))*.5)
+																	LerpTo.RightLeg.To=LerpTo.RightLeg.Cache*CFrame.Angles(0,0,0)
+																	LerpTo.LeftLeg.To=LerpTo.LeftLeg.Cache*CFrame.Angles(0,0,0)
+																end
+																if dance == 42 then
+																	anglespeed = 4
+																	LerpTo.Neck.To=LerpTo.Neck.Cache*CFrame.Angles(rad(45)+sin(angle)*.5,0,0)
+																	LerpTo.RootJoint.To=LerpTo.RootJoint.Cache*CFrame.Angles(rad(45)+sin(angle)*.5,0,0)
+																	LerpTo.RightArm.To=LerpTo.RightArm.Cache*CFrame.Angles(rad(45)+sin(angle)*.5,0,-rad(15))
+																	LerpTo.LeftArm.To=LerpTo.LeftArm.Cache*CFrame.Angles(rad(45)+sin(angle)*.5,0,rad(15))
+																	LerpTo.RightLeg.To=LerpTo.RightLeg.Cache*CFrame.Angles(rad(45)+sin(angle)*.5,0,rad(5))
+																	LerpTo.LeftLeg.To=LerpTo.LeftLeg.Cache*CFrame.Angles(rad(45)+sin(angle)*.5,0, -rad(5))
+																end
+																if dance == 43 then
+																	anglespeed = 3
+																	LerpTo.Neck.To=LerpTo.Neck.Cache*CFrame.Angles(0,-math.cos(0,360)*angle,0)
+																	LerpTo.RootJoint.To=LerpTo.RootJoint.Cache*CFrame.Angles(0,0,math.cos(0,360)*angle)
+																	LerpTo.RightArm.To=LerpTo.RightArm.Cache*CFrame.Angles(0,0,rad(135))
+																	LerpTo.LeftArm.To=LerpTo.LeftArm.Cache*CFrame.Angles(0,0,-rad(135))
+																	LerpTo.RightLeg.To=LerpTo.RightLeg.Cache*CFrame.Angles(0,0,-rad(15))
+																	LerpTo.LeftLeg.To=LerpTo.LeftLeg.Cache*CFrame.Angles(0,0,rad(15))
+																end
+																if dance == 44 then
+																	anglespeed = 2
+																	LerpTo.Neck.To = LerpTo.Neck.Cache * CFrame.Angles(math.pi/10-math.abs(math.sin(angle))*0.3,0, 0)
+																	LerpTo.RootJoint.To = LerpTo.RootJoint.Cache*CFrame.new(math.sin(angle)*2,0,0) * CFrame.Angles(math.pi/20,0,-math.sin(angle)*.5)
+																	LerpTo.RightArm.To = LerpTo.RightArm.Cache * CFrame.Angles(math.pi/3+math.abs(math.sin(angle)*.5), math.pi/20,  -math.pi/20)
+																	LerpTo.LeftArm.To = LerpTo.LeftArm.Cache * CFrame.Angles(math.pi/3+math.abs(math.sin(angle)*.5), -math.pi/20,  math.pi/20)
+																	LerpTo.RightLeg.To = LerpTo.RightLeg.Cache * CFrame.Angles(math.pi/20+math.sin(angle)*0.2, math.sin(angle)*0.08, math.rad(2.5))
+																	LerpTo.LeftLeg.To = LerpTo.LeftLeg.Cache * CFrame.Angles(math.pi/20-math.sin(angle)*0.2, -math.sin(angle)*0.08, -math.rad(2.5))
+																end
+																if dance == 45 then
+																	LerpTo.Neck.To=LerpTo.Neck.Cache*CFrame.Angles(0,rad(75),rad(0))
+																	LerpTo.RootJoint.To=LerpTo.RootJoint.Cache*CFrame.Angles(0,0,-rad(75))
+																	LerpTo.RightArm.To=LerpTo.RightArm.Cache*CFrame.Angles(rad(45),0,-rad(25))
+																	LerpTo.LeftArm.To=LerpTo.LeftArm.Cache*CFrame.Angles(rad(50),0,rad(75))
+																	LerpTo.RightLeg.To=LerpTo.RightLeg.Cache*CFrame.Angles(-rad(15),0,rad(5))*CFrame.new(0,.5,0)
+																	LerpTo.LeftLeg.To=LerpTo.LeftLeg.Cache*CFrame.Angles(-rad(10),0,-rad(6))*CFrame.new(0,.5,0)
+																end
+																if dance == 46 then
+																	LerpTo.Neck.To=LerpTo.Neck.Cache*CFrame.Angles(0,0,rad(0))
+																	LerpTo.RootJoint.To=LerpTo.RootJoint.Cache*CFrame.Angles(0,0,0)
+																	LerpTo.RightArm.To=LerpTo.RightArm.Cache*CFrame.Angles(rad(135),0,-rad(45))
+																	LerpTo.LeftArm.To=LerpTo.LeftArm.Cache*CFrame.Angles(-rad(15),0,rad(15))
+																	LerpTo.RightLeg.To=LerpTo.RightLeg.Cache*CFrame.Angles(0,0,0)
+																	LerpTo.LeftLeg.To=LerpTo.LeftLeg.Cache*CFrame.Angles(0,0,0)
+																end
+																if dance == 47 then
+																	anglespeed = 4
+																	LerpTo.Neck.To=LerpTo.Neck.Cache*CFrame.Angles(0,0,rad(0))
+																	LerpTo.RootJoint.To=LerpTo.RootJoint.Cache*CFrame.Angles(0,0,sin(angle)*.4)
+																	LerpTo.RightArm.To=LerpTo.RightArm.Cache*CFrame.Angles(sin(angle)*.4,0,0)
+																	LerpTo.LeftArm.To=LerpTo.LeftArm.Cache*CFrame.Angles(-sin(angle)*.4,0,0)
+																	LerpTo.RightLeg.To=LerpTo.RightLeg.Cache*CFrame.Angles(-sin(angle)*.4,0,0)
+																	LerpTo.LeftLeg.To=LerpTo.LeftLeg.Cache*CFrame.Angles(sin(angle)*.4,0,0)
+																end
+															end
+														end
+														local pgui = plr.PlayerGui
+														local scg = Instance.new("ScreenGui",pgui)
+														local scf = Instance.new("ScrollingFrame",scg)
+														scf.Size=UDim2.new(0,200,0,1000)
+														scf.Position=UDim2.new(.6,0,0,0)
+														scf.CanvasSize=UDim2.new(0,200,0,10000)
+														addbutton = function(x,y,text,songid,pitch,newdance)
+														if pitch ~= nil then
+														local gui = Instance.new("TextButton",scf)
+														gui.Size=UDim2.new(0,200,0,25)
+														gui.Position=UDim2.new(0,x,0,y)
+														gui.BackgroundTransparency=1
+														gui.Text=text
+														gui.FontSize="Size12"
+														gui.MouseButton1Click:connect(function()
+														if dance > 0 then
+														dance = 0
+														Song('0')
+														anim = true
+														elseif dance == 0 then
+														Song(songid,pitch)
+														anim = false
+														wait()
+														dance = newdance
+														end
+														end)
+														end
+														end
+ 
+ 
+ 
+														addbutton(0,0,'Dance1','340069097',1,1)
+														addbutton(0,25,'Dance2','218530627',1,2)
+														addbutton(0,50,'Dance3','539275200',1,3)
+														addbutton(0,75,'Dance4','325559646',1,4)
+														addbutton(0,100,'Dance5','234695144',1,5)
+														addbutton(0,125,'Dance6','559022031',1,25)
+														addbutton(0,150,'Dance7','5797602893',1,26)
+														addbutton(0,175,'Dance8','528358538',1,6)
+														addbutton(0,200,'Dance9','516825930',1,2)
+														addbutton(0,225,'Dance10','150455860',1,7)
+														addbutton(0,250,'Dance11','274044040',1,8)
+														addbutton(0,275,'Dance12','224905199',1,9)
+														addbutton(0,300,'Dance13','130795320',1,10)
+														addbutton(0,325,'Dance14','220951545',1,11)
+														addbutton(0,350,'Dance15','229845528',1,12)
+														addbutton(0,375,'Dance16','130775431',1,5)
+														addbutton(0,400,'Dance17','130791919',1,27)
+														addbutton(0,425,'Dance18','142798479',1,28)
+														addbutton(0,450,'Dance19','510664203',1,29)
+														addbutton(0,475,'Dance20','131496076',1,30)
+														addbutton(0,500,'Dance21','160404345',1,31)
+														addbutton(0,525,'Dance22','154479412',1,32)
+														addbutton(0,550,'Dance23','130844430',1,32)
+														addbutton(0,575,'Dance24','165334666',1,33)
+														addbutton(0,600,'Dance25','235467051',1,33)
+														addbutton(0,625,'Dance26','192089439',1,34)
+														addbutton(0,650,'Dance27','146366469',1,35)
+														addbutton(0,675,'Dance28','174091492',1,36)
+														addbutton(0,700,'Dance29','173120541',1,36)
+														addbutton(0,725,'Dance30','249430669',1,35)
+														addbutton(0,750,'Dance31','143620887',1,37)
+														addbutton(0,775,'Dance32','149446826',1,25)
+														addbutton(0,800,'Dance33','335427761',1,7)
+														addbutton(0,825,'Dance34','434403768',1,7)
+														addbutton(0,850,'Dance35','439906192',1,7)
+														addbutton(0,875,'Dance36','177080835',1,7)
+														addbutton(0,900,'Dance37','178297940',1,7)
+														addbutton(0,925,'Dance38','246333259',1,1)
+														addbutton(0,950,'Dance39','142314739',1,1)
+														addbutton(0,975,'Dance40','160525520',1,4)
+														addbutton(0,1000,'Dance41','178129014',1,37)
+														addbutton(0,1025,'Dance42','130776150',1,1)
+														addbutton(0,1050,'Dance43','247346728',1,35)
+														addbutton(0,1075,'Dance44','273323565',1,33)
+														addbutton(0,1100,'Dance45','157460849',1,38)
+														addbutton(0,1125,'Dance46','149069781',1,38)
+														addbutton(0,1150,'Dance47','175939350',1,37)
+														addbutton(0,1175,'Dance48','142761485',1,39)
+														addbutton(0,1200,'Dance49','232544821',1,40)
+														addbutton(0,1225,'Dance50','151696876',1,41)
+														addbutton(0,1250,'Dance51','173694098',1,7)
+														addbutton(0,1275,'Dance52','263165090',1,36)
+														addbutton(0,1300,'Dance53','142657040',1,25)
+														addbutton(0,1325,'Dance54','176914323',1,42)
+														addbutton(0,1350,'Dance55','142401311',.53,43)
+														addbutton(0,1375,'Dance56','133061687',1,6)
+														addbutton(0,1400,'Dance57','156055345',1,6)
+														addbutton(0,1425,'Dance58','146048136',1,44)
+														addbutton(0,1450,'Dance59','252754586',1,7)
+														addbutton(0,1475,'Dance60','153406097',1,2)
+														addbutton(0,1500,'Dance61','181767298',1,45)
+														addbutton(0,1525,'Dance62','316014309',1,6)
+														addbutton(0,1550,'Dance63','276829306',1,36)
+														addbutton(0,1575,'Dance64','143632950',1,33)
+														addbutton(0,1600,'Dance65','600993406',1,5)
+														addbutton(0,1625,'Dance66','511936993',1,46)
+														addbutton(0,1650,'Dance67','142633540',1,47)
+														addbutton(0,1675,'Dance68','219789082',1,6)
+														addbutton(0,1700,'Dance69','325712747',1,35)
+ 
+ 
+														local hue = 0
+ 
+														function HSV(H,S,V)
+														H = H % 360
+														local C = V * S
+														local H2 = H/60
+														local X = C * (1 - math.abs((H2 %2) -1))
+														local color = Color3.new(0,0,0)
+														if H2 <= 0 then
+														color = Color3.new(C,0,0)
+														elseif 0 <= H2 and H2 <= 1 then
+														color = Color3.new(C,X,0)
+														elseif 1 <= H2 and H2 <= 2 then
+														color = Color3.new(X,C,0)
+														elseif 2 <= H2 and H2 <= 3 then
+														color = Color3.new(0,C,X)
+														elseif 3 <= H2 and H2 <= 4 then
+														color = Color3.new(0,X,C)
+														elseif 4 <= H2 and H2 <= 5 then
+														color = Color3.new(X,0,C)
+														elseif 5 <= H2 and H2 <= 6 then
+														color = Color3.new(C,0,X)
+														end
+														local m = V - C
+														return Color3.new(color.r + m, color.g + m, color.b + m)
+														end
+ 
+														for i,v in pairs(chr:GetChildren()) do if v:IsA("Shirt") then v:Destroy() end end
+														Spawn(function()
+															while wait()do
+																angle = (angle % 100) + anglespeed/10 -- no matter whut it has to be in a loop or its on exticy
+															end 
+														end)
+														meo=0
+														sdeb=false
+														game:service'RunService'.RenderStepped:connect(function()
+															meo=meo+1
+																for _,v in pairs(LerpTo) do
+																v.Weld.C0 = Lerp.CFrame(v.Weld.C0,v.To,v.Speed)end
+															hue = hue + 3
+															hue = hue % 360
+															local clr = HSV(hue,.7,1)
+															for i,v in pairs(scf:GetChildren()) do
+																v.TextColor3=Color3.new(clr.r,clr.g,clr.b)
+															end
+															updateanims()
+														end)
+end)
+
 tab3:Line()
 
-tab3:Slider("Walkspeed", "Makes you faster.", 0, 200,16,function(t)
-game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = (t)
-end)
 
-tab3:Slider("JumpPower", "Makes you jump higher", 0, 200,50,function(t)
-game.Players.LocalPlayer.Character.Humanoid.JumpPower = (t)
-end)
 
-tab3:Slider("Gravity", "Changes Your gravity", 0, 500,196,function(t)
-game.Workspace.Gravity = (t)
-end)
 
-tab3:Button("GodMode", "Anyone cant kill you (BUT DON'T PRESS R)",  function()
-loadstring(game:HttpGet('https://pastebin.com/raw/7i7CsTPe'))()
-end)
-
-tab3:Line()
-
-tab3:Button("Rejoin", "rejoin game", function()
-local ts = game:GetService("TeleportService")
-local p = game:GetService("Players").LocalPlayer
-ts:Teleport(game.PlaceId, p)
-end)
-
-tab3:Button("ServerHop", "serverhops to another server", function()
-local HttpService, TPService = game:GetService("HttpService"), game:GetService("TeleportService")
-local ServersToTP = HttpService:JSONDecode(game:HttpGet("https://games.roblox.com/v1/games/"..game.PlaceId.."/servers/Public?sortOrder=Asc&limit=100"))
-for _, s in pairs(ServersToTP.data) do
-   if s.playing ~= s.maxPlayers then
-       TPService:TeleportToPlaceInstance(game.PlaceId, s.id)
-   end
-end
-end)
-
-tab3:Line()
-
-tab3:Label("Script Hub")
-tab3:Line()
-
-tab3:Button("Infinite Yield FE", "Loads infinite yield admin FE", function()
-loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
-end)
-
-tab3:Button("Ragdoll GUI", "Loads tsuniox's ragdoll engine gui", function()
-loadstring(game:HttpGet('https://gitlab.com/Tsuniox/lua-stuff/-/raw/master/RagdollEngineGUI.lua'))()
-end)
-
-tab3:Button("Another Ragdoll GUI", "Loads vynixyu's ragdoll gui thing", function()
-loadstring(game:HttpGet('https://raw.githubusercontent.com/RegularVynixu/Scripts/master/Vynixius%20Ragdoll%20Engine'))()
-end)
-
-tab3:Button("Auratus X", "Loads Auratus X", function()
-loadstring(game:HttpGet('https://pastebin.com/raw/1J8jdMBk'))()
-end)
-
-tab3:Button("CMD-X", "Loads cmd-x fe admin", function()
-loadstring(game:HttpGet("https://raw.githubusercontent.com/CMD-X/CMD-X/master/Source", true))()
-end)
-
-tab3:Button("Ez Hub", "Loads Ez Hub", function()
-loadstring(game:HttpGet('https://raw.githubusercontent.com/debug420/Ez-Industries-Launcher-Data/master/Launcher.lua',true))()
-end)
-tab3:Line()
 
 -- credits
 tab4 = win:Tab("Credits", "http://www.roblox.com/asset/?id=0")
