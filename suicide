@@ -1,0 +1,38 @@
+--[[ hey, if you're reading this im going through a tough time right now
+my girlfriend recently passed away from lung cancer and i dont know what to do with my life
+i might kill myself tbh
+]]
+local Sword = game.Players.LocalPlayer.Character:FindFirstChildOfClass"Tool"
+
+local function Align(Part1,Part0,CFrameOffset) -- i dont know who made this function but 64will64 sent it to me so credit to whoever made it
+	local AlignPos = Instance.new('AlignPosition', Part1);
+	AlignPos.Parent.CanCollide = false;
+	AlignPos.ApplyAtCenterOfMass = true;
+	AlignPos.MaxForce = 67752;
+	AlignPos.MaxVelocity = math.huge/9e110;
+	AlignPos.ReactionForceEnabled = false;
+	AlignPos.Responsiveness = 200;
+	AlignPos.RigidityEnabled = false;
+	local AlignOri = Instance.new('AlignOrientation', Part1);
+	AlignOri.MaxAngularVelocity = math.huge/9e110;
+	AlignOri.MaxTorque = 67752;
+	AlignOri.PrimaryAxisOnly = false;
+	AlignOri.ReactionTorqueEnabled = false;
+	AlignOri.Responsiveness = 200;
+	AlignOri.RigidityEnabled = false;
+	local AttachmentA=Instance.new('Attachment',Part1);
+	local AttachmentB=Instance.new('Attachment',Part0);
+	AttachmentB.CFrame = AttachmentB.CFrame * CFrameOffset
+	AlignPos.Attachment0 = AttachmentA;
+	AlignPos.Attachment1 = AttachmentB;
+	AlignOri.Attachment0 = AttachmentA;
+	AlignOri.Attachment1 = AttachmentB;
+end
+local Swords = game.Players.LocalPlayer.Character["Hussar SabreAccessory"].Handle
+Swords.AccessoryWeld:Destroy()
+local SwordHold = Sword.Handle
+Align(Swords,SwordHold,CFrame.new(0,0,0))
+
+
+
+wait(2) Sword.Grip = CFrame.new(1.5,0,-0.5) wait(0.5) Sword,Grip = CFrame.new(0, 0, -2.04999995)  wait(1) game.Players.LocalPlayer.Character.Humanoid.Health = 0 
