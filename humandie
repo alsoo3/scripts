@@ -1,0 +1,13 @@
+local plr = game.Players.LocalPlayer
+local char = plr.Character
+char.Humanoid:Destroy()
+Instance.new("Humanoid", char)
+
+wait(game.Players.RespawnTime - .2)
+wait(.2)
+local pos = char.Torso.Position
+wait(.3)
+local char = plr.Character
+char:MoveTo(pos)
+char.Humanoid:Destroy()
+Instance.new("Humanoid", char)
